@@ -7,10 +7,21 @@ def hello_world():
 
 @app.route('/bye')
 def bye():
+     age = 2*5
      retJson = {
-         'field1':'abc',
-         'field2':'def'
-     }
+         'Name':'toto',
+         'Age': age,
+         "phones":[
+             {
+                "phoneName": "iphone7",
+                "phoneNumber": 1111
+             },
+             {
+                 "phoneName": "Nokia",
+                 "phoneNumber": 2222
+             }   
+          ]
+    }
      return jsonify(retJson)
 
 if __name__=="__main__":
